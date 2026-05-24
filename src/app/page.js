@@ -35,6 +35,7 @@ export default function Home() {
       const interval = setInterval(fetchData, 5000);
       return () => clearInterval(interval);
     }, []);
+  
   return (
     <section className="h-screen bg-[#0b131e] content-center">
     <div className="flex justify-center">
