@@ -36,29 +36,25 @@ export default function Home() {
       return () => clearInterval(interval);
     }, []);
   return (
-    <section className="h-screen w-screen bg-slate-950 content-center">
-    <h1 className="text-5xl text-center font-bold mb-10">Monitoring system</h1>
-    <div className="sm:flex sm:justify-center">
-      <div className="w-screen gap-2 sm:flex sm:justify-center">
-        <div className="py-10 px-20 w-auto content-center shadow-xl/30 shadow-black rounded-lg">
-        <h1 className="text-2xl font-bold text-center pt-5 pb-5">Bubu's Temperature</h1>
-          <h1 className="text-2xl font-bold text-center"> <FontAwesomeIcon icon={faThermometerHalf} className="text-green-400"/> {databubu.temp}</h1>
-        </div>
-        <div className="py-10 px-20 w-auto content-center shadow-xl/30 shadow-black rounded-lg sm:ml-10">
-          <h1 className="text-2xl font-bold text-center pt-5 pb-5">Bubu's Humidity</h1>
-          <h1 className="text-2xl font-bold text-center"> <FontAwesomeIcon icon={faTint} className="text-orange-400" /> {databubu.humi}</h1>
+    <section className="h-screen bg-[#0b131e] content-center">
+    <div className="flex justify-center">
+    <div className="sm:flex sm:justify-center gap-10">
+      <div className="shadow-xl/30 border border-slate-950 rounded-full p-10 w-60 h-60 flex justify-center items-center content-center">
+        <div className="text-4xl">
+          <h1 className="font-bold my-2 flex text-center">{databubu.temp} <p className="text-md ml-2">°</p></h1>
+          <h1 className="text-2xl text-center">Bubu</h1>
+          <h1 className="font-bold my-2 flex text-center">{databubu.humi} <p className="text-sm mt-3 ml-2">%</p></h1>
         </div>
       </div>
-      <div className="w-screen gap-2 sm:flex sm:justify-center">
-        <div className="py-10 px-20 w-auto content-center shadow-xl/30 shadow-black rounded-lg">
-        <h1 className="text-2xl font-bold text-center pt-5 pb-5">Dudu's Temperature</h1>
-          <h1 className="text-2xl font-bold text-center"> <FontAwesomeIcon icon={faThermometerHalf} className="text-green-400"/> {data.temp}</h1>
-        </div>
-        <div className="py-10 px-20 w-auto content-center shadow-xl/30 shadow-black rounded-lg sm:ml-10">
-          <h1 className="text-2xl font-bold text-center pt-5 pb-5">Dudu's Humidity</h1>
-          <h1 className="text-2xl font-bold text-center"> <FontAwesomeIcon icon={faTint} className="text-orange-400" /> {data.humi}</h1>
+
+      <div className="mt-10 sm:mt-0 shadow-xl/30 border border-slate-950 rounded-full p-10 w-60 h-60 flex justify-center items-center content-center">
+        <div className="text-4xl">
+           <h1 className="font-bold my-2 flex text-center">{data.temp} <p className="text-md ml-2">°</p></h1>
+          <h1 className="text-2xl text-center">Dudu</h1>
+          <h1 className="font-bold my-2 flex text-center">{data.humi} <p className="text-sm mt-3 ml-2">%</p></h1>
         </div>
       </div>
+    </div>
     </div>
     </section>
   );
