@@ -37,12 +37,12 @@ export default function Home() {
     }, []);
   
   return (
-    <section className="h-screen bg-[#0b131e] content-center">
+    <section className="h-screen bg-[#0b131e] content-center font-[eirian]">
     <div className="flex justify-center">
     <div className="sm:flex sm:justify-center gap-10">
       <div className="shadow-xl/30 border border-slate-950 rounded-full p-10 w-60 h-60 flex justify-center items-center content-center">
         <div className="text-4xl">
-          <h1 className="font-bold my-2 flex text-center">{databubu.temp} <p className="text-md ml-2">°</p></h1>
+          <h1 className="font-bold my-2 flex text-center font-[eirian]">{databubu.temp} <p className="text-md ml-2">°</p></h1>
           <h1 className="text-2xl text-center">Bubu</h1>
           <h1 className="font-bold my-2 flex text-center">{databubu.humi} <p className="text-sm mt-3 ml-2">%</p></h1>
         </div>

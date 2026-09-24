@@ -1,5 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
+
+const eirian = localFont({
+  src: '../../public/fonts/eirian/Eirian.ttf',
+  variable: '--font-eirian',
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Monitoring App",
+  title: "Temperature Monitoring App",
   description: "Created by Mebhevy Services",
 };
 
@@ -20,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${eirian.variable} antialiased`}
       >
         {children}
       </body>
